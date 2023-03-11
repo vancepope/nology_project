@@ -5,22 +5,32 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
+  run-tests:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     docker:
-      - image: cimg/base:stable
+      - image: circleci/python:3.10.7
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+        name: Install Python Dependencies
+        command: |
+        echo 'export PATH=$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
+        pip install -r requirements.txt
+      - run:
+        name: Build NPM dependencies
+        npm install
+        command:
+      - run: Run Unit Test
+      - command: |
+        pytest ~/test/Test_NologyNav_Unit.py ~/test/Test_Google_API_Handler.py ~/test/Test_NologyNav_Integration.py -v --html=report.html --cov=server/ --cov-report=html --cov-branch
+      - run: Build And Run Application
+      - command: |
+        npm run build && export FLASK_APP=~/server/NologyNav.py && flask run
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
+workflow:
+  build_test:
     jobs:
-      - say-hello
+      - run_tests
