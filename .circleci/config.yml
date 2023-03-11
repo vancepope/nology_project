@@ -5,29 +5,9 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  run-tests:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+  build:
     docker:
-      - image: cimg/python:3.10.7
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+      - image: cimg/python:3.11.2
     steps:
       - checkout
-      - run:
-        name: Install Python Dependencies
-        command: |
-        python3 -m venv env
-        source ~/bin/activate
-        pip install -r requirements.txt
-      - run: Run Unit Test
-      - command: |
-        pytest ~/test/Test_NologyNav_Unit.py ~/test/Test_Google_API_Handler.py ~/test/Test_NologyNav_Integration.py -v --html=report.html --cov=server/ --cov-report=html --cov-branch
-      - run: Build And Run Application
-      - command: |
-        npm run build && export FLASK_APP=~/server/NologyNav.py && flask run
-
-workflow:
-  build_test:
-    jobs:
-      - run_tests
+      - run: python3 -m venv env && source ~/bin/activate && pip install -r requirements.txt && pytest ~/test/Test_NologyNav_Unit.py ~/test/Test_Google_API_Handler.py ~/test/Test_NologyNav_Integration.py -v --html=report.html --cov=server/ --cov-report=html --cov-branch && npm run build && export FLASK_APP=~/server/NologyNav.py && flask run
