@@ -7,7 +7,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/python:3.11.2
+      - image: cimg/python:3.10.7
     steps:
       - checkout
       - run: python3 -m venv env && source ~/bin/activate && pip install -r requirements.txt && pytest ~/test/Test_NologyNav_Unit.py ~/test/Test_Google_API_Handler.py ~/test/Test_NologyNav_Integration.py -v --html=report.html --cov=server/ --cov-report=html --cov-branch && npm run build && export FLASK_APP=~/server/NologyNav.py && flask run 
