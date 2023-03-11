@@ -1,0 +1,20 @@
+{
+    "waypoints": 16,
+    "distance_travelled": "355 mi",
+    "total_time": "5 hours 25 mins",
+    "lat_lng": [
+        {
+            "lat": 32.7157323,
+            "lng": -117.1610969
+        },
+        {
+            "lat": 33.448222,
+            "lng": -112.0739866
+        }
+    ],
+    "avg_speed": 65.7,
+    "modes_of_transportation": [
+        "driving"
+    ],
+    "summary": "This journey will take 5 hours 25 mins over 355 mi, covering 16 waypoints at an average speed of 65.7. It will only require driving, at a starting (Lat/Long) of (32.7157323, -117.1610969), and ending at (33.448222, -112.0739866)"
+}

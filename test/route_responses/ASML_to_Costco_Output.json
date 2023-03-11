@@ -1,0 +1,20 @@
+{
+    "waypoints": 7,
+    "distance_travelled": "3.6 mi",
+    "total_time": "9 mins",
+    "lat_lng": [
+        {
+            "lat": 33.0181578,
+            "lng": -117.101009
+        },
+        {
+            "lat": 32.9871036,
+            "lng": -117.0810815
+        }
+    ],
+    "avg_speed": 18.0,
+    "modes_of_transportation": [
+        "driving"
+    ],
+    "summary": "This journey will take 9 mins over 3.6 mi, covering 7 waypoints at an average speed of 18.0. It will only require driving, at a starting (Lat/Long) of (33.0181578, -117.101009), and ending at (32.9871036, -117.0810815)"
+}

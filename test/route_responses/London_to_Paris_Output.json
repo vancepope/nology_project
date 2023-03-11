@@ -1,0 +1,21 @@
+{
+    "waypoints": 50,
+    "distance_travelled": "295.5 mi",
+    "total_time": "5 hours 50 mins",
+    "lat_lng": [
+        {
+            "lat": 51.5072126,
+            "lng": -0.1275835
+        },
+        {
+            "lat": 48.85637149999999,
+            "lng": 2.3532147
+        }
+    ],
+    "avg_speed": 50.9,
+    "modes_of_transportation": [
+        "driving",
+        "ferry-train"
+    ],
+    "summary": "This journey will take 5 hours 50 mins over 295.5 mi, covering 50 waypoints at an average speed of 50.9. In addition to driving, you will also need to use an auto-train, at a starting (Lat/Long) of (51.5072126, -0.1275835), and ending at (48.85637149999999, 2.3532147)"
+}

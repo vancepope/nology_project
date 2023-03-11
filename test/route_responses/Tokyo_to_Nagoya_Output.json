@@ -1,0 +1,20 @@
+{
+    "waypoints": 34,
+    "distance_travelled": "214.1 mi",
+    "total_time": "4 hours 20 mins",
+    "lat_lng": [
+        {
+            "lat": 35.676177,
+            "lng": 139.6503061
+        },
+        {
+            "lat": 35.1816493,
+            "lng": 136.9067035
+        }
+    ],
+    "avg_speed": 49.8,
+    "modes_of_transportation": [
+        "driving"
+    ],
+    "summary": "This journey will take 4 hours 20 mins over 214.1 mi, covering 34 waypoints at an average speed of 49.8. It will only require driving, at a starting (Lat/Long) of (35.676177, 139.6503061), and ending at (35.1816493, 136.9067035)"
+}

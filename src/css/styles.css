@@ -1,0 +1,38 @@
+.container {
+    background-color: #fff;
+}
+ul {
+    list-style-type: none;
+}
+#icon {
+    height: 50px;
+    width: auto;
+    -webkit-transform:rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 1.5rem;
+    margin-bottom: 0;
+}
+main {
+    overflow: auto;
+}
+header {
+    background-color: #6c757d;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+#title {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}

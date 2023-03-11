@@ -1,0 +1,14 @@
+env/
+venv/
+.python-version
+*.log
+.env
+__pycache__/
+.coverage
+assets/
+htmlcov/
+report.html
+.pytest_cache/
+node_modules/
+bundle.js
+.DS_Store

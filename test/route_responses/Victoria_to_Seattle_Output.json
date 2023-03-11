@@ -1,0 +1,21 @@
+{
+    "waypoints": 17,
+    "distance_travelled": "183.9 mi",
+    "total_time": "4 hours 38 mins",
+    "lat_lng": [
+        {
+            "lat": 48.4281923,
+            "lng": -123.3658279
+        },
+        {
+            "lat": 47.6063821,
+            "lng": -122.3322283
+        }
+    ],
+    "avg_speed": 40.0,
+    "modes_of_transportation": [
+        "driving",
+        "ferry"
+    ],
+    "summary": "This journey will take 4 hours 38 mins over 183.9 mi, covering 17 waypoints at an average speed of 40.0. In addition to driving, you will also need to use a ferry, at a starting (Lat/Long) of (48.4281923, -123.3658279), and ending at (47.6063821, -122.3322283)"
+}
