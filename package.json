@@ -9,7 +9,7 @@
   "scripts": {
     "test": "pytest test/Test_Google_API_Handler.py test/Test_NologyNav_Unit.py test/Test_NologyNav_Integration.py -v --html=report.html --cov=server/ --cov-report=html --cov-branch",
     "build": "webpack --config webpack.config.js",
-    "start": "npm run build && export FLASK_APP=server/NologyNav.py && export FLASK_ENV=production && flask run --host=34.203.75.54"
+    "start": "npm run build && export FLASK_APP=server/NologyNav.py && export FLASK_ENV=production && flask run --host=18.214.225.3"
   },
   "repository": {
     "type": "git",
