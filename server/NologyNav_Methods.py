@@ -53,13 +53,12 @@ def summary(navigation_data):
     outputStr = "This journey will take " + str(navigation_data["total_time"]) + " over " + str(navigation_data["distance_travelled"])
     outputStr += ", covering " + str(navigation_data["waypoints"]) + " waypoints at an average speed of " + str(navigation_data["avg_speed"]) + ". "
     
-    match len(navigation_data["modes_of_transportation"]):
-        case 1:
-            outputStr += "It will only require " + str(navigation_data["modes_of_transportation"][0])
-        case 2:
-            outputStr += "In addition to " + str(navigation_data["modes_of_transportation"][0]) + ", you will also need to use " + str(navigation_data["modes_of_transportation"][1])
-        case 3:
-            outputStr += "In addition to " + str(navigation_data["modes_of_transportation"][0]) + ", you will also need to use " + str(navigation_data["modes_of_transportation"][1]) + " and " + str(navigation_data["modes_of_transportation"][2])
+    if (len(navigation_data["modes_of_transportation"]) == 1):
+        outputStr += "It will only require " + str(navigation_data["modes_of_transportation"][0])
+    elif (len(navigation_data["modes_of_transportation"]) == 2):
+        outputStr += "In addition to " + str(navigation_data["modes_of_transportation"][0]) + ", you will also need to use " + str(navigation_data["modes_of_transportation"][1])
+    else:
+        outputStr += "In addition to " + str(navigation_data["modes_of_transportation"][0]) + ", you will also need to use " + str(navigation_data["modes_of_transportation"][1]) + " and " + str(navigation_data["modes_of_transportation"][2])
     outputStr = outputStr.replace("ferry-train", "an auto-train").replace("ferry", "a ferry")
     outputStr += ", at a starting (Lat/Long) of (" + str(navigation_data["lat_lng"][0]['lat']) + ", " + str(navigation_data["lat_lng"][0]['lng']) +  "), and ending at (" + str(navigation_data["lat_lng"][1]['lat']) + ", " + str(navigation_data["lat_lng"][1]['lng']) + ")"
     return outputStr
