@@ -6,6 +6,10 @@
   "directories": {
     "test": "test"
   },
+  "engines": {
+    "npm": ">=8 <9",
+    "node": ">=18 <19"
+  },
   "scripts": {
     "test": "pytest test/Test_Google_API_Handler.py test/Test_NologyNav_Unit.py test/Test_NologyNav_Integration.py -v --html=report.html --cov=server/ --cov-report=html --cov-branch",
     "build": "npm install && webpack --config webpack.config.js",
